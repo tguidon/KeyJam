@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyJam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Gn-WRX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="487"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScaleCell" id="zp7-Sl-i80">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zp7-Sl-i80" id="KQH-2c-Ar9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqi-3A-06N">
+                                <rect key="frame" x="0.0" y="507" width="375" height="160"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d1-mM-ZRs">
+                                        <rect key="frame" x="48" y="32" width="279" height="40"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bA2-AU-8Bt">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-ZG-NnC" customClass="BlackKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Iir-QS-URl"/>
+                                                            <constraint firstAttribute="width" constant="40" id="gT9-ey-pO6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="C#"/>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Taf-gK-PIy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-9E-wot" customClass="BlackKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="dhr-9J-uI7"/>
+                                                            <constraint firstAttribute="width" constant="40" id="ubM-qn-7Cr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="D#"/>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0T-GN-nX6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bix-IW-OSQ" customClass="BlackKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="119.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="RrG-AT-uK9"/>
+                                                            <constraint firstAttribute="height" constant="40" id="lLB-NE-Pqr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="F#"/>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSo-OL-v6l"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBA-1e-1Cj" customClass="BlackKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="179.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="M9c-6k-Ap4"/>
+                                                            <constraint firstAttribute="width" constant="40" id="aY0-Od-Bia"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="G#"/>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPl-9G-8ya"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O8-m4-vAT" customClass="BlackKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="239" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="W0S-E0-uJo"/>
+                                                            <constraint firstAttribute="height" constant="40" id="sG4-EL-Ag3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="A#"/>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bU0-kY-mRI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bA2-AU-8Bt" firstAttribute="top" secondItem="8d1-mM-ZRs" secondAttribute="top" id="1c1-kD-2Es"/>
+                                            <constraint firstItem="bA2-AU-8Bt" firstAttribute="leading" secondItem="8d1-mM-ZRs" secondAttribute="leading" id="Jco-GF-Jjq"/>
+                                            <constraint firstAttribute="bottom" secondItem="bA2-AU-8Bt" secondAttribute="bottom" id="Xfc-Gi-1Ns"/>
+                                            <constraint firstAttribute="trailing" secondItem="bA2-AU-8Bt" secondAttribute="trailing" id="XgW-0h-Cnn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZZ-fI-MBQ">
+                                        <rect key="frame" x="16" y="88" width="343" height="40"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="syt-oV-B0W">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCq-s8-1QZ" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="dTh-QW-dXU"/>
+                                                            <constraint firstAttribute="width" constant="40" id="zMs-Tf-j2t"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oT-s0-Qp9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4T-rv-JDx" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="50.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="Rk4-K1-eIM"/>
+                                                            <constraint firstAttribute="height" constant="40" id="mve-DE-yTf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="D">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oW7-5D-A19"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-NW-xl7" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="101" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="i3V-kN-XDs"/>
+                                                            <constraint firstAttribute="height" constant="40" id="rkf-zr-eJB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="E">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9D2-ER-qDv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-ci-EYO" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="151.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="6lq-6a-N4I"/>
+                                                            <constraint firstAttribute="width" constant="40" id="fXf-95-13d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfn-aU-nUk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-GU-4ll" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="202" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="2mk-as-GXK"/>
+                                                            <constraint firstAttribute="height" constant="40" id="RKw-iy-RAz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="G">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryN-vC-n1B"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRU-98-R0Y" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="252.5" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="BwN-ZG-FjX"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Mu9-uy-naB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="A">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idO-fS-JMB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5T-L8-KF7" customClass="WhiteKeyButton" customModule="KeyJam" customModuleProvider="target">
+                                                        <rect key="frame" x="303" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="NMn-6Y-sbN"/>
+                                                            <constraint firstAttribute="width" constant="40" id="raM-qN-Per"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="B">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="keyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uqt-zd-2Zg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="syt-oV-B0W" secondAttribute="bottom" id="E3U-K2-Ma5"/>
+                                            <constraint firstItem="syt-oV-B0W" firstAttribute="leading" secondItem="IZZ-fI-MBQ" secondAttribute="leading" id="FAG-MR-nuG"/>
+                                            <constraint firstItem="syt-oV-B0W" firstAttribute="top" secondItem="IZZ-fI-MBQ" secondAttribute="top" id="KNN-Bg-1IN"/>
+                                            <constraint firstAttribute="height" constant="40" id="fmq-s2-6dQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="syt-oV-B0W" secondAttribute="trailing" id="mWR-dE-toV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="IZZ-fI-MBQ" firstAttribute="leading" secondItem="Bqi-3A-06N" secondAttribute="leading" constant="16" id="A9g-M1-qWF"/>
+                                    <constraint firstItem="8d1-mM-ZRs" firstAttribute="top" secondItem="Bqi-3A-06N" secondAttribute="top" constant="32" id="BtU-gg-h7q"/>
+                                    <constraint firstAttribute="trailing" secondItem="IZZ-fI-MBQ" secondAttribute="trailing" constant="16" id="JGm-3r-S79"/>
+                                    <constraint firstItem="8d1-mM-ZRs" firstAttribute="leading" secondItem="Bqi-3A-06N" secondAttribute="leading" constant="48" id="LhH-iI-GA1"/>
+                                    <constraint firstAttribute="bottom" secondItem="IZZ-fI-MBQ" secondAttribute="bottom" constant="32" id="QkN-z5-wfe"/>
+                                    <constraint firstAttribute="trailing" secondItem="8d1-mM-ZRs" secondAttribute="trailing" constant="48" id="bIG-0A-8ZQ"/>
+                                    <constraint firstItem="IZZ-fI-MBQ" firstAttribute="top" secondItem="8d1-mM-ZRs" secondAttribute="bottom" constant="16" id="ejp-ia-Vtb"/>
+                                    <constraint firstItem="8d1-mM-ZRs" firstAttribute="height" secondItem="IZZ-fI-MBQ" secondAttribute="height" id="iYa-Io-NyY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bqi-3A-06N" firstAttribute="top" secondItem="NfT-Gn-WRX" secondAttribute="bottom" id="1Bt-nS-1jG"/>
+                            <constraint firstItem="NfT-Gn-WRX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I0P-vH-GeL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bqi-3A-06N" secondAttribute="bottom" id="LYK-hu-az1"/>
+                            <constraint firstAttribute="trailing" secondItem="NfT-Gn-WRX" secondAttribute="trailing" id="NoQ-I0-7JB"/>
+                            <constraint firstItem="Bqi-3A-06N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TH9-6m-RbO"/>
+                            <constraint firstAttribute="trailing" secondItem="Bqi-3A-06N" secondAttribute="trailing" id="U40-OJ-AEB"/>
+                            <constraint firstItem="NfT-Gn-WRX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hZ4-4S-6a6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blackKeyView" destination="8d1-mM-ZRs" id="aFO-Ff-Sc4"/>
+                        <outlet property="keyView" destination="Bqi-3A-06N" id="d5E-ZL-gAd"/>
+                        <outlet property="whiteKeyView" destination="IZZ-fI-MBQ" id="3uU-0E-EbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
