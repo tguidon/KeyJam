@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let fullName    = "First Last"
+        let fullNameArr = fullName.components(separatedBy: " ")
+        
+        let name    = fullNameArr[0]
+        let surname = fullNameArr[1]
     }
     
     @IBAction func keyButtonTapped(_ sender: KeyButton) {
@@ -28,4 +33,6 @@ class ViewController: UIViewController {
         
         selectedKeyDictionary[key] = sender.isSelected
     }
+    
+    
 }
