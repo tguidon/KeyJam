@@ -32,4 +32,26 @@ class Utilities {
         }
         return keys
     }
+    
+    class func getSelectedKeyData(_ selectedKeyArr: [String], _ keyDataArr: [KeyData]) -> [KeyData] {
+        var selectecKeyDataArr: [KeyData] = []
+        let selectedKeySet = Set(selectedKeyArr)
+//        print("Selected Keys: \(selectedKeyArr)")
+        
+        for keyData in keyDataArr {
+            guard let notesInKey = keyData.notesInKey else {
+                print("No notes in key")
+                return []
+            }
+            let notesInKeySet = Set(notesInKey)
+            
+            if selectedKeySet.isSubset(of: notesInKeySet) && selectedKeyArr.count > 0 {
+//                print("Key \(keyData.key!): . Notes \(notesInKey)")
+//                print("In Key")
+                selectecKeyDataArr.append(keyData)
+            }
+        }
+        
+        return selectecKeyDataArr
+    }
 }

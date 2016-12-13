@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var selectedKeyDictionary = SelectedKeyDictionary
     let keyDataArr = Utilities.loadKeysFromDisk()
+    var selectedKeyDataArr: [KeyData] = []
+    var selectedKeyArr: [String] = []
 
     
     override func viewDidLoad() {
@@ -33,12 +35,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - UITableView DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return keyDataArr.count
+        return selectedKeyDataArr.count
     }
 
     // MARK: - UITableView Delegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let keyData = keyDataArr[indexPath.row]
+        let keyData = selectedKeyDataArr[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "KeyCell", for: indexPath) as! KeyTableViewCell
         cell.keyLabel.text = keyData.key
         cell.notesInKeyLabel.text = keyData.notesInKeyString
@@ -53,7 +55,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         selectedKeyDictionary[key] = sender.isSelected
-        print(selectedKeyDictionary)
+        
+        for (key, selected) in selectedKeyDictionary {
+            if selected {
+                if !selectedKeyArr.contains(key) {
+                    selectedKeyArr.append(key)
+                }
+            } else {
+                if selectedKeyArr.contains(key) {
+                    selectedKeyArr = selectedKeyArr.filter { $0 != key }
+                }
+            }
+        }
+        
+        selectedKeyDataArr = Utilities.getSelectedKeyData(selectedKeyArr, keyDataArr)
+        tableView.reloadData()
     }
     
 }
