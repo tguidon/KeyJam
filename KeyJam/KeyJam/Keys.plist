@@ -46,7 +46,7 @@
 		<key>key</key>
 		<string>F Major</string>
 		<key>notesInKey</key>
-		<string>F G A B♭ C D E</string>
+		<string>F G A A# C D E</string>
 		<key>imageName</key>
 		<string>f_major_scale</string>
 	</dict>
@@ -102,7 +102,7 @@
 		<key>key</key>
 		<string>C Minor</string>
 		<key>notesInKey</key>
-		<string>C D E♭ F G A♭ B♭</string>
+		<string>C D D# F G G# A#</string>
 		<key>imageName</key>
 		<string>c_minor_scale</string>
 	</dict>
@@ -118,7 +118,7 @@
 		<key>key</key>
 		<string>D Minor</string>
 		<key>notesInKey</key>
-		<string>D E F G A B♭ C</string>
+		<string>D E F G A A# C</string>
 		<key>imageName</key>
 		<string>d_minor_scale</string>
 	</dict>
@@ -142,7 +142,7 @@
 		<key>key</key>
 		<string>F Minor</string>
 		<key>notesInKey</key>
-		<string>F G A♭ B♭ C D♭ E♭</string>
+		<string>F G G# A# C C# D#</string>
 		<key>imageName</key>
 		<string>f_minor_scale</string>
 	</dict>
@@ -158,7 +158,7 @@
 		<key>key</key>
 		<string>G Minor</string>
 		<key>notesInKey</key>
-		<string>G A B♭ C D E♭ F</string>
+		<string>G A A# C D D# F</string>
 		<key>imageName</key>
 		<string>g_minor_scale</string>
 	</dict>
