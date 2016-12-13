@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E8263B631DDAACAE009839AB /* Scales.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8263B621DDAACAE009839AB /* Scales.plist */; };
+		E8263B631DDAACAE009839AB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8263B621DDAACAE009839AB /* Keys.plist */; };
 		E8844B3E1DD0B8A9006AC51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */; };
 		E8844B401DD0B8A9006AC51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8844B3F1DD0B8A9006AC51B /* ViewController.swift */; };
 		E8844B431DD0B8A9006AC51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8844B411DD0B8A9006AC51B /* Main.storyboard */; };
 		E8844B451DD0B8A9006AC51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8844B441DD0B8A9006AC51B /* Assets.xcassets */; };
 		E8844B481DD0B8A9006AC51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8844B461DD0B8A9006AC51B /* LaunchScreen.storyboard */; };
 		E8844B501DD0B96F006AC51B /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8844B4F1DD0B96F006AC51B /* KeyButton.swift */; };
+		E8999E8C1DFF6C830001DA93 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8B1DFF6C830001DA93 /* Utilities.swift */; };
+		E8999E8E1DFF6DC60001DA93 /* KeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8D1DFF6DC60001DA93 /* KeyData.swift */; };
+		E8999E901DFF72830001DA93 /* KeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8F1DFF72830001DA93 /* KeyTableViewCell.swift */; };
 		E8A511E61DDAA036004CC190 /* KJColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511E51DDAA036004CC190 /* KJColors.swift */; };
 		E8A511E81DDAA73C004CC190 /* SelectedKeyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E8263B621DDAACAE009839AB /* Scales.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scales.plist; sourceTree = "<group>"; };
+		E8263B621DDAACAE009839AB /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E8844B3A1DD0B8A9006AC51B /* KeyJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8844B3F1DD0B8A9006AC51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8844B3F1DD0B8A9006AC51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		E8844B421DD0B8A9006AC51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8844B441DD0B8A9006AC51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8844B471DD0B8A9006AC51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8844B491DD0B8A9006AC51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8844B4F1DD0B96F006AC51B /* KeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
+		E8999E8B1DFF6C830001DA93 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E8999E8D1DFF6DC60001DA93 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
+		E8999E8F1DFF72830001DA93 /* KeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyTableViewCell.swift; sourceTree = "<group>"; };
 		E8A511E51DDAA036004CC190 /* KJColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJColors.swift; sourceTree = "<group>"; };
 		E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedKeyDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,18 +68,45 @@
 		E8844B3C1DD0B8A9006AC51B /* KeyJam */ = {
 			isa = PBXGroup;
 			children = (
+				E8844B491DD0B8A9006AC51B /* Info.plist */,
 				E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */,
 				E8844B3F1DD0B8A9006AC51B /* ViewController.swift */,
-				E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */,
-				E8A511E51DDAA036004CC190 /* KJColors.swift */,
-				E8844B4F1DD0B96F006AC51B /* KeyButton.swift */,
-				E8844B411DD0B8A9006AC51B /* Main.storyboard */,
 				E8844B441DD0B8A9006AC51B /* Assets.xcassets */,
+				E8999E931DFF72C10001DA93 /* Data */,
+				E8999E911DFF728C0001DA93 /* Helpers */,
 				E8844B461DD0B8A9006AC51B /* LaunchScreen.storyboard */,
-				E8844B491DD0B8A9006AC51B /* Info.plist */,
-				E8263B621DDAACAE009839AB /* Scales.plist */,
+				E8844B411DD0B8A9006AC51B /* Main.storyboard */,
+				E8999E921DFF72A70001DA93 /* TableViewCells */,
 			);
 			path = KeyJam;
+			sourceTree = "<group>";
+		};
+		E8999E911DFF728C0001DA93 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8844B4F1DD0B96F006AC51B /* KeyButton.swift */,
+				E8A511E51DDAA036004CC190 /* KJColors.swift */,
+				E8999E8B1DFF6C830001DA93 /* Utilities.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E8999E921DFF72A70001DA93 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E8999E8F1DFF72830001DA93 /* KeyTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E8999E931DFF72C10001DA93 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E8999E8D1DFF6DC60001DA93 /* KeyData.swift */,
+				E8263B621DDAACAE009839AB /* Keys.plist */,
+				E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8844B481DD0B8A9006AC51B /* LaunchScreen.storyboard in Resources */,
-				E8263B631DDAACAE009839AB /* Scales.plist in Resources */,
+				E8263B631DDAACAE009839AB /* Keys.plist in Resources */,
 				E8844B451DD0B8A9006AC51B /* Assets.xcassets in Resources */,
 				E8844B431DD0B8A9006AC51B /* Main.storyboard in Resources */,
 			);
@@ -150,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8999E8E1DFF6DC60001DA93 /* KeyData.swift in Sources */,
+				E8999E8C1DFF6C830001DA93 /* Utilities.swift in Sources */,
 				E8A511E61DDAA036004CC190 /* KJColors.swift in Sources */,
 				E8844B501DD0B96F006AC51B /* KeyButton.swift in Sources */,
 				E8A511E81DDAA73C004CC190 /* SelectedKeyDictionary.swift in Sources */,
+				E8999E901DFF72830001DA93 /* KeyTableViewCell.swift in Sources */,
 				E8844B401DD0B8A9006AC51B /* ViewController.swift in Sources */,
 				E8844B3E1DD0B8A9006AC51B /* AppDelegate.swift in Sources */,
 			);

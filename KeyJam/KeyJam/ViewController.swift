@@ -8,21 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var keyView: UIView!
     @IBOutlet weak var whiteKeyView: UIView!
     @IBOutlet weak var blackKeyView: UIView!
+    @IBOutlet weak var majorMinorSegmentedControl: UISegmentedControl! {
+        didSet {
+            majorMinorSegmentedControl.tintColor = KJColors.green()
+        }
+    }
+    @IBOutlet weak var tableView: UITableView!
     
     var selectedKeyDictionary = SelectedKeyDictionary
+    let keyDataArr = Utilities.loadKeysFromDisk()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let fullName    = "First Last"
-        let fullNameArr = fullName.components(separatedBy: " ")
         
-        let name    = fullNameArr[0]
-        let surname = fullNameArr[1]
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+    }
+    
+    // MARK: - UITableView DataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return keyDataArr.count
+    }
+
+    // MARK: - UITableView Delegate
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let keyData = keyDataArr[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "KeyCell", for: indexPath) as! KeyTableViewCell
+        cell.keyLabel.text = keyData.key
+        cell.notesInKeyLabel.text = keyData.notesInKeyString
+        
+        return cell
     }
     
     @IBAction func keyButtonTapped(_ sender: KeyButton) {
@@ -32,7 +53,7 @@ class ViewController: UIViewController {
         }
         
         selectedKeyDictionary[key] = sender.isSelected
+        print(selectedKeyDictionary)
     }
-    
     
 }

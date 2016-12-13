@@ -13,7 +13,7 @@ class KeyButton: UIButton {
         super.init(coder: aDecoder)
         
         self.layer.cornerRadius = 20.0
-        self.layer.borderColor = KJColors.orange().cgColor
+        self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.borderWidth = 2.0
     }
     
@@ -40,7 +40,7 @@ class KeyButton: UIButton {
             if newValue {
                 self.layer.borderColor = KJColors.green().cgColor
             } else {
-                self.layer.borderColor = KJColors.orange().cgColor
+                self.layer.borderColor = UIColor.lightGray.cgColor
             }
             super.isSelected = newValue
         }
