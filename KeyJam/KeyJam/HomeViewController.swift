@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  KeyJam
 //
 //  Created by Taylor Guidon on 11/7/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var keyView: UIView!
     @IBOutlet weak var whiteKeyView: UIView!
     @IBOutlet weak var blackKeyView: UIView!
@@ -18,6 +18,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cheatSheetButton: UIButton! {
+        didSet {
+            cheatSheetButton.setTitleColor(KJColors.green(), for: .normal)
+            cheatSheetButton.layer.borderWidth = 2.0
+            cheatSheetButton.layer.borderColor = KJColors.green().cgColor
+            cheatSheetButton.layer.cornerRadius = 5.0
+        }
+    }
     
     var selectedKeyDictionary = SelectedKeyDictionary
     let keyDataArr = Utilities.loadKeysFromDisk()
@@ -44,6 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "KeyCell", for: indexPath) as! KeyTableViewCell
         cell.keyLabel.text = keyData.key
         cell.notesInKeyLabel.text = keyData.notesInKeyString
+        cell.selectionStyle = .none
         
         return cell
     }

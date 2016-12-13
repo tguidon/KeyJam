@@ -17,7 +17,15 @@ class KeyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var notesInKeyLabel: UILabel! {
         didSet {
-            notesInKeyLabel.textColor = .white
+            notesInKeyLabel.textColor = UIColor.lightGray
+        }
+    }
+    @IBOutlet weak var pianoView: UIView! {
+        didSet {
+            pianoView.layer.cornerRadius = 8
+            pianoView.layer.masksToBounds = true
+            pianoView.layer.borderColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.00).cgColor
+            pianoView.layer.borderWidth = 1.0
         }
     }
     
