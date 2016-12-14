@@ -74,5 +74,7 @@ class Utilities {
     
     class func removeEmptyStateFromTableView(_ tableView: UITableView) {
         tableView.backgroundView = nil
+        tableView.isScrollEnabled = true
+        tableView.separatorStyle = .singleLine
     }
 }
