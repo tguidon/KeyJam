@@ -29,6 +29,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var selectedKeyDictionary = SelectedKeyDictionary
     let keyDataArr = Utilities.loadKeysFromDisk()
+    let errorString: String = "There are either no keys for the selected notes or no notes selected. Please try a new combination below."
     var selectedKeyDataArr: [KeyData] = []
     var selectedKeyArr: [String] = []
 
@@ -39,6 +40,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+        
+        if selectedKeyDataArr.count == 0 {
+            Utilities.addEmptyStateToTableView(tableView, errorString)
+        } else {
+            Utilities.removeEmptyStateFromTableView(tableView)
+        }
     }
     
     // MARK: - UITableView DataSource
@@ -62,9 +69,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("No label")
             return
         }
-        
         selectedKeyDictionary[key] = sender.isSelected
-        
         for (key, selected) in selectedKeyDictionary {
             if selected {
                 if !selectedKeyArr.contains(key) {
@@ -76,9 +81,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-        
-        selectedKeyDataArr = Utilities.getSelectedKeyData(selectedKeyArr, keyDataArr)
+        selectedKeyDataArr = Utilities.getSelectedKeyDataArr(selectedKeyArr, keyDataArr)
         tableView.reloadData()
+        
+        if selectedKeyDataArr.count == 0 {
+            Utilities.addEmptyStateToTableView(tableView, errorString)
+        } else {
+            Utilities.removeEmptyStateFromTableView(tableView)
+        }
     }
     
 }

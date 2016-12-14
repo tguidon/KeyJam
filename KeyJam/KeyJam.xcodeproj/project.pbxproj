@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95FE64E8389E19E4171CB05E /* Pods_KeyJam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6976EE7290EE5381784E0F /* Pods_KeyJam.framework */; };
 		E8263B631DDAACAE009839AB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8263B621DDAACAE009839AB /* Keys.plist */; };
 		E8844B3E1DD0B8A9006AC51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */; };
 		E8844B401DD0B8A9006AC51B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8844B3F1DD0B8A9006AC51B /* HomeViewController.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2DC3D1841F8F8F078C93F1 /* Pods-KeyJam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyJam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyJam/Pods-KeyJam.debug.xcconfig"; sourceTree = "<group>"; };
+		5E6976EE7290EE5381784E0F /* Pods_KeyJam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyJam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2603D237459709877D5B405 /* Pods-KeyJam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyJam.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyJam/Pods-KeyJam.release.xcconfig"; sourceTree = "<group>"; };
 		E8263B621DDAACAE009839AB /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E8844B3A1DD0B8A9006AC51B /* KeyJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FE64E8389E19E4171CB05E /* Pods_KeyJam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2875D2CDD503825667BDD5BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A2DC3D1841F8F8F078C93F1 /* Pods-KeyJam.debug.xcconfig */,
+				D2603D237459709877D5B405 /* Pods-KeyJam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		793C500CD4768E98798BCD93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E6976EE7290EE5381784E0F /* Pods_KeyJam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8844B311DD0B8A9006AC51B = {
 			isa = PBXGroup;
 			children = (
 				E8844B3C1DD0B8A9006AC51B /* KeyJam */,
 				E8844B3B1DD0B8A9006AC51B /* Products */,
+				2875D2CDD503825667BDD5BF /* Pods */,
+				793C500CD4768E98798BCD93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8844B4C1DD0B8A9006AC51B /* Build configuration list for PBXNativeTarget "KeyJam" */;
 			buildPhases = (
+				F3B740261C96633699CFD4D1 /* [CP] Check Pods Manifest.lock */,
 				E8844B361DD0B8A9006AC51B /* Sources */,
 				E8844B371DD0B8A9006AC51B /* Frameworks */,
 				E8844B381DD0B8A9006AC51B /* Resources */,
+				81553B952E85B802BFA3471F /* [CP] Embed Pods Frameworks */,
+				85417D2D88FB82B59FBDD591 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81553B952E85B802BFA3471F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyJam/Pods-KeyJam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85417D2D88FB82B59FBDD591 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyJam/Pods-KeyJam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B740261C96633699CFD4D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8844B361DD0B8A9006AC51B /* Sources */ = {
@@ -313,6 +388,7 @@
 		};
 		E8844B4D1DD0B8A9006AC51B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2DC3D1841F8F8F078C93F1 /* Pods-KeyJam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZMW5MD4WT;
@@ -326,6 +402,7 @@
 		};
 		E8844B4E1DD0B8A9006AC51B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2603D237459709877D5B405 /* Pods-KeyJam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZMW5MD4WT;

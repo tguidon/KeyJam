@@ -28,6 +28,14 @@ class KeyTableViewCell: UITableViewCell {
             pianoView.layer.borderWidth = 1.0
         }
     }
+    @IBOutlet weak var pianoImageView: UIImageView! {
+        didSet {
+            pianoImageView.layer.cornerRadius = 8
+            pianoImageView.layer.masksToBounds = true
+            pianoImageView.layer.borderColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.00).cgColor
+            pianoImageView.layer.borderWidth = 1.0
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

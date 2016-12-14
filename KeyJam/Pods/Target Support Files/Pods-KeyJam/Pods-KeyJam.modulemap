@@ -1,0 +1,6 @@
+framework module Pods_KeyJam {
+  umbrella header "Pods-KeyJam-umbrella.h"
+
+  export *
+  module * { export * }
+}

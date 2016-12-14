@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class Utilities {
 
@@ -33,7 +34,7 @@ class Utilities {
         return keys
     }
     
-    class func getSelectedKeyData(_ selectedKeyArr: [String], _ keyDataArr: [KeyData]) -> [KeyData] {
+    class func getSelectedKeyDataArr(_ selectedKeyArr: [String], _ keyDataArr: [KeyData]) -> [KeyData] {
         var selectecKeyDataArr: [KeyData] = []
         let selectedKeySet = Set(selectedKeyArr)
         
@@ -50,5 +51,28 @@ class Utilities {
         }
         
         return selectecKeyDataArr
+    }
+    
+    class func addEmptyStateToTableView(_ tableView: UITableView, _ errorString: String) {
+        let emptyLabel = UILabel(frame: tableView.frame)
+        emptyLabel.text = errorString
+        emptyLabel.textAlignment = .center
+        emptyLabel.font.withSize(26)
+        emptyLabel.textColor = UIColor.lightGray
+        emptyLabel.lineBreakMode = .byWordWrapping
+        emptyLabel.numberOfLines = 0
+        tableView.backgroundView = emptyLabel
+        tableView.isScrollEnabled = false
+        emptyLabel.snp.makeConstraints { (make) in
+            make.centerY.equalTo(tableView)
+            make.centerX.equalTo(tableView)
+            make.left.equalTo(tableView).offset(64)
+            make.right.equalTo(tableView).offset(-64)
+        }
+        tableView.separatorStyle = .none
+    }
+    
+    class func removeEmptyStateFromTableView(_ tableView: UITableView) {
+        tableView.backgroundView = nil
     }
 }
