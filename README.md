@@ -1,2 +1,4 @@
 # KeyJam
-an iPhone application for music makers lacking every scale in their head
+an iPhone application for music makers lacking perfect music theory knowledge
+
+![Preview](images/preview.png)
