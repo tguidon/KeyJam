@@ -18,20 +18,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var cheatSheetButton: UIButton! {
+    @IBOutlet weak var allKeysButton: UIButton! {
         didSet {
-            cheatSheetButton.setTitleColor(KJColors.green(), for: .normal)
-            cheatSheetButton.layer.borderWidth = 2.0
-            cheatSheetButton.layer.borderColor = KJColors.green().cgColor
-            cheatSheetButton.layer.cornerRadius = 5.0
+            allKeysButton.setTitleColor(UIColor.lightGray, for: .normal)
+            allKeysButton.layer.borderWidth = 2.0
+            allKeysButton.layer.borderColor = UIColor.lightGray.cgColor
+            allKeysButton.layer.cornerRadius = 5.0
         }
     }
+    @IBOutlet var keyButtonCollection: [KeyButton]!
     
     var selectedKeyDictionary = SelectedKeyDictionary
     let keyDataArr = Utilities.loadKeysFromDisk()
     let errorString: String = "There are either no keys for the selected notes or no notes selected. Please try a new combination below."
     var selectedKeyDataArr: [KeyData] = []
     var selectedKeyArr: [String] = []
+    var allKeysSelected: Bool = false
 
     
     override func viewDidLoad() {
@@ -83,6 +85,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         selectedKeyDataArr = Utilities.getSelectedKeyDataArr(selectedKeyArr, keyDataArr)
+        reloadScreen()
+    }
+    
+    @IBAction func toggleAllKeys(_ sender: Any) {
+        if allKeysSelected {
+            allKeysButton.setTitleColor(UIColor.lightGray, for: .normal)
+            allKeysButton.layer.borderColor = UIColor.lightGray.cgColor
+            for keyButton in keyButtonCollection {
+                keyButton.isSelected = false
+            }
+            selectedKeyDataArr = []
+        } else {
+            allKeysButton.setTitleColor(KJColors.green(), for: .normal)
+            allKeysButton.layer.borderColor = KJColors.green().cgColor
+            for keyButton in keyButtonCollection {
+                keyButton.isSelected = true
+            }
+            selectedKeyDataArr = keyDataArr
+        }
+        allKeysSelected = !allKeysSelected
+        reloadScreen()
+    }
+    
+    func reloadScreen() {
         tableView.reloadData()
         
         if selectedKeyDataArr.count == 0 {
