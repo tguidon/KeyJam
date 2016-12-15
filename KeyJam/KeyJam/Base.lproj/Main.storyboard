@@ -29,10 +29,10 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zp7-Sl-i80" id="KQH-2c-Ar9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84e-nO-DXj">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84e-nO-DXj" customClass="PianoView" customModule="KeyJam" customModuleProvider="target">
                                                     <rect key="frame" x="31" y="16" width="314" height="120"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.96235318790000002" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -66,7 +66,7 @@
                                         <connections>
                                             <outlet property="keyLabel" destination="DCi-K9-2DN" id="ls9-Gc-v84"/>
                                             <outlet property="notesInKeyLabel" destination="1ZK-To-a6F" id="j1K-LK-pKq"/>
-                                            <outlet property="pianoView" destination="84e-nO-DXj" id="ece-GZ-JdT"/>
+                                            <outlet property="pianoView" destination="84e-nO-DXj" id="zfx-Jy-wlv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

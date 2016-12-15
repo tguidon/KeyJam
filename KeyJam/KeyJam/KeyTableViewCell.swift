@@ -20,22 +20,15 @@ class KeyTableViewCell: UITableViewCell {
             notesInKeyLabel.textColor = UIColor.lightGray
         }
     }
-    @IBOutlet weak var pianoView: UIView! {
+    @IBOutlet weak var pianoView: PianoView! {
         didSet {
-            pianoView.layer.cornerRadius = 8
-            pianoView.layer.masksToBounds = true
-            pianoView.layer.borderColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.00).cgColor
-            pianoView.layer.borderWidth = 1.0
+            pianoView.visibleStatus = [true, true, true, true, true, true,
+                                       true, true, true, true, true, true,
+                                       true, true, true, true, true, true,
+                                       true, true, true, true, true, true]
         }
     }
-    @IBOutlet weak var pianoImageView: UIImageView! {
-        didSet {
-            pianoImageView.layer.cornerRadius = 8
-            pianoImageView.layer.masksToBounds = true
-            pianoImageView.layer.borderColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.00).cgColor
-            pianoImageView.layer.borderWidth = 1.0
-        }
-    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

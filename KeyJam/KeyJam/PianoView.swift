@@ -14,7 +14,7 @@ enum PianoKey {
     case Black
 }
 
-class Piano: UIView {
+class PianoView: UIView {
     let KEYS:[PianoKey] = [.White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White]
     let KEY_SPACING = 2.0
     var greenDots = [UIView]()
@@ -70,21 +70,7 @@ class Piano: UIView {
                     }
                 })
                 
-                // Add green dot
-                let greenDot = UIView()
-                greenDot.backgroundColor = .green
-                greenDot.translatesAutoresizingMaskIntoConstraints = false
-                greenDot.layer.cornerRadius = 5
-                self.insertSubview(greenDot, aboveSubview: v)
-                
-                greenDot.snp.makeConstraints({ (make) in
-                    make.width.equalTo(10)
-                    make.height.equalTo(10)
-                    make.centerX.equalTo(v.snp.centerX)
-                    make.top.equalTo(v.snp.bottom).offset(-20)
-                })
-                
-                greenDots.append(greenDot)
+                addGreenDot(toView: v)
                 
                 // store state
                 previousWhiteKey = v
@@ -99,15 +85,38 @@ class Piano: UIView {
                     }
                 })
                 
+                addGreenDot(toView: v)
+                
                 // Store black keys in array just because we need to bring them to the front below
                 blackKeys.append(v)
             }
         }
        
-        // Bring black keys to front above white keys
+        // Bring black keys and green dots to front above white keys
         for key in blackKeys {
             self.bringSubview(toFront: key)
         }
+        for dot in greenDots {
+            self.bringSubview(toFront: dot)
+        }
+    }
+    
+    func addGreenDot(toView: UIView) {
+        // Add green dot
+        let greenDot = UIView()
+        greenDot.backgroundColor = .green
+        greenDot.translatesAutoresizingMaskIntoConstraints = false
+        greenDot.layer.cornerRadius = 5
+        self.insertSubview(greenDot, aboveSubview: toView)
+        
+        greenDot.snp.makeConstraints({ (make) in
+            make.width.equalTo(10)
+            make.height.equalTo(10)
+            make.centerX.equalTo(toView.snp.centerX)
+            make.top.equalTo(toView.snp.bottom).offset(-20)
+        })
+        
+        greenDots.append(greenDot)
     }
 
 }
