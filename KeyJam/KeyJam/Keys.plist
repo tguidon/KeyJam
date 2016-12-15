@@ -7,192 +7,192 @@
 		<string>C Major</string>
 		<key>notesInKey</key>
 		<string>C D E F G A B</string>
-		<key>imageName</key>
-		<string>c_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>101011010101100000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>C# Major</string>
 		<key>notesInKey</key>
 		<string>C# D# E# F# G# A# B#</string>
-		<key>imageName</key>
-		<string>c#_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>010101101010110000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>D Major</string>
 		<key>notesInKey</key>
 		<string>D E F# G A B C#</string>
-		<key>imageName</key>
-		<string>d_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>001010110101011000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>D# Major</string>
 		<key>notesInKey</key>
 		<string>D# E# F G# A# B# C</string>
-		<key>imageName</key>
-		<string>d#_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000101011010101100000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>E Major</string>
 		<key>notesInKey</key>
 		<string>E F# G# A B C# D#</string>
-		<key>imageName</key>
-		<string>e_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000010101101010110000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>F Major</string>
 		<key>notesInKey</key>
 		<string>F G A A# C D E</string>
-		<key>imageName</key>
-		<string>f_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000001010110101011000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>F# Major</string>
 		<key>notesInKey</key>
 		<string>F# G# A# B C# D# E#</string>
-		<key>imageName</key>
-		<string>f#_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000101011010101100000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>G Major</string>
 		<key>notesInKey</key>
 		<string>G A B C D E F#</string>
-		<key>imageName</key>
-		<string>g_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000010101101010110000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>G# Major</string>
 		<key>notesInKey</key>
 		<string>G# A# B# C# D# E# F</string>
-		<key>imageName</key>
-		<string>g#_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000001010110101011000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>A Major</string>
 		<key>notesInKey</key>
 		<string>A B C# D E F# G#</string>
-		<key>imageName</key>
-		<string>a_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000101011010101100</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>A# Major</string>
 		<key>notesInKey</key>
 		<string>A# B# C D# E# F G</string>
-		<key>imageName</key>
-		<string>a#_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000010101101010110</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>B Major</string>
 		<key>notesInKey</key>
 		<string>B C# D# E F# G# A#</string>
-		<key>imageName</key>
-		<string>b_major_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000001010110101011</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>C Minor</string>
 		<key>notesInKey</key>
 		<string>C D D# F G G# A#</string>
-		<key>imageName</key>
-		<string>c_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>101101011010100000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>C# Minor</string>
 		<key>notesInKey</key>
 		<string>C# D# E F# G# A B</string>
-		<key>imageName</key>
-		<string>c#_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>010110101101010000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>D Minor</string>
 		<key>notesInKey</key>
 		<string>D E F G A A# C</string>
-		<key>imageName</key>
-		<string>d_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>001011010110101000000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>D# Minor</string>
 		<key>notesInKey</key>
 		<string>D# E# F# G# A# B C#</string>
-		<key>imageName</key>
-		<string>d#_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000101101011010100000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>E Minor</string>
 		<key>notesInKey</key>
 		<string>E F# G A B C D</string>
-		<key>imageName</key>
-		<string>e_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000010110101101010000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>F Minor</string>
 		<key>notesInKey</key>
 		<string>F G G# A# C C# D#</string>
-		<key>imageName</key>
-		<string>f_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000001011010110101000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>F# Minor</string>
 		<key>notesInKey</key>
 		<string>F# G# A B C# D E</string>
-		<key>imageName</key>
-		<string>f#_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>0000001011010110101000000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>G Minor</string>
 		<key>notesInKey</key>
 		<string>G A A# C D D# F</string>
-		<key>imageName</key>
-		<string>g_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000010110101101010000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>G# Minor</string>
 		<key>notesInKey</key>
 		<string>G# A# B C# D# E F#</string>
-		<key>imageName</key>
-		<string>g#_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000001011010110101000</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>A Minor</string>
 		<key>notesInKey</key>
 		<string>A B C D E F G</string>
-		<key>imageName</key>
-		<string>a_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000101101011010100</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>A# Minor</string>
 		<key>notesInKey</key>
 		<string>A# B# C# D# E# F# G#</string>
-		<key>imageName</key>
-		<string>a#_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000010110101101010</string>
 	</dict>
 	<dict>
 		<key>key</key>
 		<string>B Minor</string>
 		<key>notesInKey</key>
 		<string>B C# D E F# G A</string>
-		<key>imageName</key>
-		<string>b_minor_scale</string>
+		<key>highlightedArrayString</key>
+		<string>000000000001011010110101</string>
 	</dict>
 </array>
 </plist>

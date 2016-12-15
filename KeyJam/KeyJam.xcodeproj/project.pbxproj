@@ -19,7 +19,6 @@
 		E8999E8C1DFF6C830001DA93 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8B1DFF6C830001DA93 /* Utilities.swift */; };
 		E8999E8E1DFF6DC60001DA93 /* KeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8D1DFF6DC60001DA93 /* KeyData.swift */; };
 		E8999E901DFF72830001DA93 /* KeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E8F1DFF72830001DA93 /* KeyTableViewCell.swift */; };
-		E8999E961DFF8E630001DA93 /* CheatSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8999E951DFF8E630001DA93 /* CheatSheetViewController.swift */; };
 		E8A511E61DDAA036004CC190 /* KJColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511E51DDAA036004CC190 /* KJColors.swift */; };
 		E8A511E81DDAA73C004CC190 /* SelectedKeyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		E8999E8B1DFF6C830001DA93 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E8999E8D1DFF6DC60001DA93 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
 		E8999E8F1DFF72830001DA93 /* KeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyTableViewCell.swift; sourceTree = "<group>"; };
-		E8999E951DFF8E630001DA93 /* CheatSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatSheetViewController.swift; sourceTree = "<group>"; };
 		E8A511E51DDAA036004CC190 /* KJColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KJColors.swift; sourceTree = "<group>"; };
 		E8A511E71DDAA73C004CC190 /* SelectedKeyDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedKeyDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +97,6 @@
 				E8844B491DD0B8A9006AC51B /* Info.plist */,
 				E8844B3D1DD0B8A9006AC51B /* AppDelegate.swift */,
 				E8844B3F1DD0B8A9006AC51B /* HomeViewController.swift */,
-				E8999E951DFF8E630001DA93 /* CheatSheetViewController.swift */,
 				E8844B441DD0B8A9006AC51B /* Assets.xcassets */,
 				E8999E931DFF72C10001DA93 /* Data */,
 				E8999E911DFF728C0001DA93 /* Helpers */,
@@ -273,7 +270,6 @@
 				E8999E901DFF72830001DA93 /* KeyTableViewCell.swift in Sources */,
 				E8844B401DD0B8A9006AC51B /* HomeViewController.swift in Sources */,
 				E8844B3E1DD0B8A9006AC51B /* AppDelegate.swift in Sources */,
-				E8999E961DFF8E630001DA93 /* CheatSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

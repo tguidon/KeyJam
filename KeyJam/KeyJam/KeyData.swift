@@ -12,12 +12,22 @@ class KeyData {
     var key: String?
     var notesInKeyString: String?
     var notesInKey: [String]?
-    var imageName: String?
+    //var highlightedArrayString: String?
+    var highlightKeysBoolArray: [Bool] = []
     
-    init(_ key: String,_ notesInKeyString: String,_ imageName: String) {
+    init(_ key: String,_ notesInKeyString: String,_ highlightedArrayString: String) {
         self.key = key
         self.notesInKeyString = notesInKeyString
         self.notesInKey = notesInKeyString.components(separatedBy: " ")
-        self.imageName = imageName
+        // self.highlightedArrayString = highlightedArrayString
+        
+        for hightlight in highlightedArrayString.characters {
+            if hightlight == "1" {
+                self.highlightKeysBoolArray.append(true)
+            } else {
+                self.highlightKeysBoolArray.append(false)
+            }
+        }
+        
     }
 }

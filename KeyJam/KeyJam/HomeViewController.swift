@@ -59,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "KeyCell", for: indexPath) as! KeyTableViewCell
         cell.keyLabel.text = keyData.key
         cell.notesInKeyLabel.text = keyData.notesInKeyString
+        cell.pianoView.visibleStatus = keyData.highlightKeysBoolArray
         cell.selectionStyle = .none
         
         return cell

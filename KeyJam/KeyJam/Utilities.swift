@@ -26,8 +26,8 @@ class Utilities {
             if let dict = item as? NSDictionary {
                 let key = dict["key"] as! String
                 let notesInKeyString = dict["notesInKey"] as! String
-                let imageName = dict["imageName"] as! String
-                let keyData = KeyData(key, notesInKeyString, imageName)
+                let highlightedArrayString = dict["highlightedArrayString"] as! String
+                let keyData = KeyData(key, notesInKeyString, highlightedArrayString)
                 keys.append(keyData)
             }
         }
