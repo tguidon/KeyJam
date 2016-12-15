@@ -17,33 +17,20 @@ class KeyButton: UIButton {
         self.layer.borderWidth = 2.0
     }
     
-    override var isHighlighted: Bool {
-        get {
-            return super.isHighlighted
-        }
-        
-        set {
-            if newValue {
-                self.isSelected = !self.isSelected
-            } else {
-            }
-            super.isHighlighted = newValue
-        }
-    }
-    
     override var isSelected: Bool {
-        get {
-            return super.isSelected
-        }
-        
-        set {
-            if newValue {
+        didSet {
+            if isSelected {
                 self.layer.borderColor = KJColors.green().cgColor
             } else {
                 self.layer.borderColor = UIColor.lightGray.cgColor
             }
-            super.isSelected = newValue
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.isSelected = !self.isSelected
     }
 }
 
