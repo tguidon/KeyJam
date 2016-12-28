@@ -12,20 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var keyView: UIView!
     @IBOutlet weak var whiteKeyView: UIView!
     @IBOutlet weak var blackKeyView: UIView!
-    @IBOutlet weak var majorMinorSegmentedControl: UISegmentedControl! {
-        didSet {
-            majorMinorSegmentedControl.tintColor = KJColors.green()
-        }
-    }
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var allKeysButton: UIButton! {
-        didSet {
-            allKeysButton.setTitleColor(UIColor.lightGray, for: .normal)
-            allKeysButton.layer.borderWidth = 2.0
-            allKeysButton.layer.borderColor = UIColor.lightGray.cgColor
-            allKeysButton.layer.cornerRadius = 5.0
-        }
-    }
     @IBOutlet var keyButtonCollection: [KeyButton]!
     
     var selectedKeyDictionary = SelectedKeyDictionary
@@ -85,26 +72,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         selectedKeyDataArr = Utilities.getSelectedKeyDataArr(selectedKeyArr, keyDataArr)
-        reloadScreen()
-    }
-    
-    @IBAction func toggleAllKeys(_ sender: Any) {
-        if allKeysSelected {
-            allKeysButton.setTitleColor(UIColor.lightGray, for: .normal)
-            allKeysButton.layer.borderColor = UIColor.lightGray.cgColor
-            for keyButton in keyButtonCollection {
-                keyButton.isSelected = false
-            }
-            selectedKeyDataArr = []
-        } else {
-            allKeysButton.setTitleColor(KJColors.green(), for: .normal)
-            allKeysButton.layer.borderColor = KJColors.green().cgColor
-            for keyButton in keyButtonCollection {
-                keyButton.isSelected = true
-            }
-            selectedKeyDataArr = keyDataArr
-        }
-        allKeysSelected = !allKeysSelected
         reloadScreen()
     }
     

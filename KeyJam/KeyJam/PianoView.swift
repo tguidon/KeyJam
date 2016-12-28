@@ -15,8 +15,7 @@ enum PianoKey {
 }
 
 class PianoView: UIView {
-    let KEYS:[PianoKey] = [.White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White]
-    let KEY_SPACING = 2.0
+    let Keys: [PianoKey] = [.White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White]
     var greenDots = [UIView]()
     var blackKeys = [UIView]()
     
@@ -42,10 +41,10 @@ class PianoView: UIView {
     }
     
     func createPiano() {
-        let numberOfWhiteKeys = KEYS.filter { $0 == .White }.count
+        let numberOfWhiteKeys = Keys.filter { $0 == .White }.count
         
         var previousWhiteKey: UIView? = nil
-        for key in KEYS {
+        for key in Keys {
             let v = UIView()
             v.translatesAutoresizingMaskIntoConstraints = false
             v.backgroundColor = key == .White ? .white : .black

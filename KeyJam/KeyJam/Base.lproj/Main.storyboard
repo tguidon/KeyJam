@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="188" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Gn-WRX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="431"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="487"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KeyCell" rowHeight="188" id="zp7-Sl-i80" userLabel="KeyCell" customClass="KeyTableViewCell" customModule="KeyJam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="188"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zp7-Sl-i80" id="KQH-2c-Ar9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84e-nO-DXj" customClass="PianoView" customModule="KeyJam" customModuleProvider="target">
@@ -72,7 +72,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqi-3A-06N">
-                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="507" width="375" height="160"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d1-mM-ZRs">
                                         <rect key="frame" x="48" y="32" width="279" height="40"/>
@@ -277,31 +277,17 @@
                                             <constraint firstAttribute="trailing" secondItem="syt-oV-B0W" secondAttribute="trailing" id="mWR-dE-toV"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-rI-mA4">
-                                        <rect key="frame" x="147.5" y="144" width="80" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="K8k-4o-i6a"/>
-                                            <constraint firstAttribute="width" constant="80" id="XYT-JP-URb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="All Keys"/>
-                                        <connections>
-                                            <action selector="toggleAllKeys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emQ-JC-uh7"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="IZZ-fI-MBQ" firstAttribute="leading" secondItem="Bqi-3A-06N" secondAttribute="leading" constant="16" id="A9g-M1-qWF"/>
                                     <constraint firstItem="8d1-mM-ZRs" firstAttribute="top" secondItem="Bqi-3A-06N" secondAttribute="top" constant="32" id="BtU-gg-h7q"/>
-                                    <constraint firstAttribute="bottom" secondItem="X8f-rI-mA4" secondAttribute="bottom" constant="32" id="Bwg-yf-aYc"/>
                                     <constraint firstAttribute="trailing" secondItem="IZZ-fI-MBQ" secondAttribute="trailing" constant="16" id="JGm-3r-S79"/>
                                     <constraint firstItem="8d1-mM-ZRs" firstAttribute="leading" secondItem="Bqi-3A-06N" secondAttribute="leading" constant="48" id="LhH-iI-GA1"/>
                                     <constraint firstAttribute="trailing" secondItem="8d1-mM-ZRs" secondAttribute="trailing" constant="48" id="bIG-0A-8ZQ"/>
                                     <constraint firstItem="IZZ-fI-MBQ" firstAttribute="top" secondItem="8d1-mM-ZRs" secondAttribute="bottom" constant="16" id="ejp-ia-Vtb"/>
                                     <constraint firstItem="8d1-mM-ZRs" firstAttribute="height" secondItem="IZZ-fI-MBQ" secondAttribute="height" id="iYa-Io-NyY"/>
-                                    <constraint firstItem="X8f-rI-mA4" firstAttribute="centerX" secondItem="Bqi-3A-06N" secondAttribute="centerX" id="qLF-Vo-zxb"/>
-                                    <constraint firstItem="X8f-rI-mA4" firstAttribute="top" secondItem="IZZ-fI-MBQ" secondAttribute="bottom" constant="16" id="zXe-gm-Gpb"/>
+                                    <constraint firstAttribute="bottom" secondItem="IZZ-fI-MBQ" secondAttribute="bottom" constant="32" id="lh7-sh-CbN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -317,7 +303,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="allKeysButton" destination="X8f-rI-mA4" id="s72-0v-TFv"/>
                         <outlet property="blackKeyView" destination="8d1-mM-ZRs" id="aFO-Ff-Sc4"/>
                         <outlet property="keyView" destination="Bqi-3A-06N" id="d5E-ZL-gAd"/>
                         <outlet property="tableView" destination="NfT-Gn-WRX" id="0zM-MY-EEM"/>
