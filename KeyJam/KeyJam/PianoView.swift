@@ -15,10 +15,12 @@ enum PianoKey {
 }
 
 class PianoView: UIView {
+    // Two scales of a piano
     let Keys: [PianoKey] = [.White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .White, .Black, .White, .Black, .White, .Black, .White]
     var greenDots = [UIView]()
     var blackKeys = [UIView]()
     
+    // If the note is in the key show the green dot
     var visibleStatus = [Bool]() {
         didSet {
             for (index, bool) in visibleStatus.enumerated() {
@@ -49,7 +51,7 @@ class PianoView: UIView {
             v.translatesAutoresizingMaskIntoConstraints = false
             v.backgroundColor = key == .White ? .white : .black
             
-            // add the view to the view hiarchy
+            // Add the view to the view hiarchy
             addSubview(v)
             
             // setup constraints
@@ -57,6 +59,7 @@ class PianoView: UIView {
                 v.layer.borderColor = self.backgroundColor?.cgColor
                 v.layer.borderWidth = 1
                 
+                // Create the view and make it the width of 1 / numWhiteKeys
                 v.snp.makeConstraints({ (make) in
                     make.height.equalTo(self.snp.height)
                     make.top.equalTo(0)

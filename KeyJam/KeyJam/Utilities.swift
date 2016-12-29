@@ -16,10 +16,13 @@ class Utilities {
     }
     
     class func loadKeysFromDisk() -> [KeyData] {
+        // Get the plist path
         guard let path = Bundle.main.path(forResource: "Keys", ofType: "plist"),
             let dictArray = NSArray(contentsOfFile: path) else {
                 return []
         }
+        
+        // Convert the plist into an array of KeyData
         var keys: [KeyData] = []
         for item in dictArray {
             if let dict = item as? NSDictionary {
@@ -34,6 +37,9 @@ class Utilities {
     }
     
     class func getSelectedKeyDataArr(_ selectedKeyArr: [String], _ keyDataArr: [KeyData]) -> [KeyData] {
+        // Creates a new array of the selected keys.
+        // Loops through the keys selected and sees if they are a subset
+        // of the keyDataArr
         var selectecKeyDataArr: [KeyData] = []
         let selectedKeySet = Set(selectedKeyArr)
         
@@ -48,11 +54,12 @@ class Utilities {
                 selectecKeyDataArr.append(keyData)
             }
         }
-        
         return selectecKeyDataArr
     }
     
     class func addEmptyStateToTableView(_ tableView: UITableView, _ errorString: String) {
+        // If there are no keys selected or no keys with the given notes
+        // show an error state.
         let emptyLabel = UILabel(frame: tableView.frame)
         emptyLabel.text = errorString
         emptyLabel.textAlignment = .center
@@ -72,6 +79,7 @@ class Utilities {
     }
     
     class func removeEmptyStateFromTableView(_ tableView: UITableView) {
+        // Remove the empty view
         tableView.backgroundView = nil
         tableView.isScrollEnabled = true
         tableView.separatorStyle = .singleLine

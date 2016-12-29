@@ -12,9 +12,6 @@ import EasyAnimation
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var keyView: UIView!
     @IBOutlet weak var whiteKeyView: UIView!
-    
-    
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var keyButtonCollection: [KeyButton]!
     
@@ -24,7 +21,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var selectedKeyDataArr: [KeyData] = []
     var selectedKeyArr: [String] = []
     var allKeysSelected: Bool = false
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +48,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.keyLabel.text = keyData.key
         cell.notesInKeyLabel.text = keyData.notesInKeyString
         cell.pianoView.visibleStatus = keyData.highlightKeysBoolArray
+        // Make the tableview separator full width
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         cell.selectionStyle = .none
@@ -65,12 +62,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func keyButtonTapped(_ sender: KeyButton) {
         Utilities.hapticGeneratorForSelection()
+        // Animate the button
         UIView.animateAndChain(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .curveEaseInOut], animations: {
             sender.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
         }, completion: nil).animate(withDuration: 0.05) {
             sender.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }
         
+        // After a note is selected update the selected key dict
+        // and then make a new KeyData array based on what is 
+        // selected.
         guard let key = sender.titleLabel?.text else {
             print("No label")
             return
@@ -100,5 +101,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             Utilities.removeEmptyStateFromTableView(tableView)
         }
     }
-    
 }
