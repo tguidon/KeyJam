@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 class Utilities {
-
     class func hapticGeneratorForSelection() {
         let generator = UISelectionFeedbackGenerator()
         generator.selectionChanged()

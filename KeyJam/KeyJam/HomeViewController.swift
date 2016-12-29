@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyAnimation
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var keyView: UIView!
@@ -63,6 +64,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func keyButtonTapped(_ sender: KeyButton) {
+        Utilities.hapticGeneratorForSelection()
+        UIView.animateAndChain(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .curveEaseInOut], animations: {
+            sender.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+        }, completion: nil).animate(withDuration: 0.05) {
+            sender.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }
+        
         guard let key = sender.titleLabel?.text else {
             print("No label")
             return
