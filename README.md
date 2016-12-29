@@ -1,7 +1,7 @@
 # KeyJam
 An iPhone application for music makers lacking perfect music theory.
 
-![Icon](images/icon.png)
+<img src="images/app-icon.png" width="200">
 
 Currently I do no have plans to put the application onto the App Store. The only way to install the app is with some knowledge of Xcode.
 
@@ -17,7 +17,7 @@ Currently I do no have plans to put the application onto the App Store. The only
 3) Open the KeyJam.xcworkspace file
 3) Build and install on your iOS device!
 
-![Preview](images/preview.png)
+<img src="images/preview.png" width="500">
 
 ## Credit
 
