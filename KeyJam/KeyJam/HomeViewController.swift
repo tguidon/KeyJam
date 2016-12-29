@@ -11,7 +11,9 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var keyView: UIView!
     @IBOutlet weak var whiteKeyView: UIView!
-    @IBOutlet weak var blackKeyView: UIView!
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var keyButtonCollection: [KeyButton]!
     
@@ -49,9 +51,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.keyLabel.text = keyData.key
         cell.notesInKeyLabel.text = keyData.notesInKeyString
         cell.pianoView.visibleStatus = keyData.highlightKeysBoolArray
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
     @IBAction func keyButtonTapped(_ sender: KeyButton) {

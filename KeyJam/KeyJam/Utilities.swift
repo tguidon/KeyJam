@@ -57,7 +57,7 @@ class Utilities {
         let emptyLabel = UILabel(frame: tableView.frame)
         emptyLabel.text = errorString
         emptyLabel.textAlignment = .center
-        emptyLabel.font.withSize(96)
+        emptyLabel.font = UIFont(name: "AvenirNext-Medium", size: 24)
         emptyLabel.textColor = UIColor.lightGray
         emptyLabel.lineBreakMode = .byWordWrapping
         emptyLabel.numberOfLines = 0
